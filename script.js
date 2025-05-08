@@ -51,6 +51,17 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Event card click handler
+document.querySelectorAll('.event-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+        const link = this.getAttribute('href');
+        if (link) {
+            window.open(link, '_blank');
+            e.preventDefault();
+        }
+    });
+});
+
 // Speaking events click handler
 document.querySelectorAll('.event-card').forEach(card => {
     card.addEventListener('click', function(e) {

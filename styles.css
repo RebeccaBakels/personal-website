@@ -419,45 +419,83 @@ body {
 }
 
 .hero-text {
-    max-width: 600px;
+    max-width: 700px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 4rem;
+    margin-bottom: 1rem;
     color: var(--primary-color);
     text-align: center;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    line-height: 1.2;
 }
 
 .hero h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
     color: var(--secondary-color);
     opacity: 0.9;
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
     color: var(--primary-color);
+    line-height: 1.6;
 }
 
 .profile-image {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
     z-index: 1;
 }
+
+@media screen and (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .profile-image {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
 
 
 .profile-photo {
@@ -536,7 +574,7 @@ section h2 {
 
 .event-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -550,6 +588,7 @@ section h2 {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(76, 175, 80, 0.5);
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .event-card:hover {
@@ -558,6 +597,8 @@ section h2 {
 
 .event-content {
     padding: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .event-info {
